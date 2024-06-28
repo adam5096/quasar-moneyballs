@@ -1,0 +1,54 @@
+Date : 2024-06-28 11:53:18
+Directory : c:\Users\User\Desktop\Money-app\quasar-moneyballs\src
+Total : 16 files,  306 codes, 45 comments, 66 blanks, all 417 lines
+
+Languages
++------------+------------+------------+------------+------------+------------+
+| language   | files      | code       | comment    | blank      | total      |
++------------+------------+------------+------------+------------+------------+
+| Vue        |          6 |        200 |          0 |         33 |        233 |
+| JavaScript |          6 |         68 |         30 |         23 |        121 |
+| SCSS       |          2 |         17 |         12 |          8 |         37 |
+| XML        |          1 |         15 |          0 |          0 |         15 |
+| TypeScript |          1 |          6 |          3 |          2 |         11 |
++------------+------------+------------+------------+------------+------------+
+
+Directories
++---------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                  | files      | code       | comment    | blank      | total      |
++---------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                     |         16 |        306 |         45 |         66 |        417 |
+| . (Files)                                                                             |          1 |          8 |          0 |          2 |         10 |
+| assets                                                                                |          1 |         15 |          0 |          0 |         15 |
+| components                                                                            |          1 |         38 |          0 |          6 |         44 |
+| components\Nav                                                                        |          1 |         38 |          0 |          6 |         44 |
+| css                                                                                   |          2 |         17 |         12 |          8 |         37 |
+| layouts                                                                               |          1 |         69 |          0 |         11 |         80 |
+| pages                                                                                 |          3 |         85 |          0 |         14 |         99 |
+| router                                                                                |          2 |         29 |         13 |          9 |         51 |
+| stores                                                                                |          3 |         26 |         13 |          9 |         48 |
+| use                                                                                   |          2 |         19 |          7 |          7 |         33 |
++---------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++---------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| filename                                                                              | language   | code       | comment    | blank      | total      |
++---------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| c:\Users\User\Desktop\Money-app\quasar-moneyballs\src\App.vue                         | Vue        |          8 |          0 |          2 |         10 |
+| c:\Users\User\Desktop\Money-app\quasar-moneyballs\src\assets\quasar-logo-vertical.svg | XML        |         15 |          0 |          0 |         15 |
+| c:\Users\User\Desktop\Money-app\quasar-moneyballs\src\components\Nav\NavLink.vue      | Vue        |         38 |          0 |          6 |         44 |
+| c:\Users\User\Desktop\Money-app\quasar-moneyballs\src\css\app.scss                    | SCSS       |          8 |          2 |          1 |         11 |
+| c:\Users\User\Desktop\Money-app\quasar-moneyballs\src\css\quasar.variables.scss       | SCSS       |          9 |         10 |          7 |         26 |
+| c:\Users\User\Desktop\Money-app\quasar-moneyballs\src\layouts\MainLayout.vue          | Vue        |         69 |          0 |         11 |         80 |
+| c:\Users\User\Desktop\Money-app\quasar-moneyballs\src\pages\ErrorNotFound.vue         | Vue        |         26 |          0 |          4 |         30 |
+| c:\Users\User\Desktop\Money-app\quasar-moneyballs\src\pages\PageEntries.vue           | Vue        |         49 |          0 |          8 |         57 |
+| c:\Users\User\Desktop\Money-app\quasar-moneyballs\src\pages\PageSettings.vue          | Vue        |         10 |          0 |          2 |         12 |
+| c:\Users\User\Desktop\Money-app\quasar-moneyballs\src\router\index.js                 | JavaScript |         14 |         11 |          6 |         31 |
+| c:\Users\User\Desktop\Money-app\quasar-moneyballs\src\router\routes.js                | JavaScript |         15 |          2 |          3 |         20 |
+| c:\Users\User\Desktop\Money-app\quasar-moneyballs\src\stores\example-store.js         | JavaScript |         14 |          0 |          2 |         16 |
+| c:\Users\User\Desktop\Money-app\quasar-moneyballs\src\stores\index.js                 | JavaScript |          6 |         10 |          5 |         21 |
+| c:\Users\User\Desktop\Money-app\quasar-moneyballs\src\stores\store-flag.d.ts          | TypeScript |          6 |          3 |          2 |         11 |
+| c:\Users\User\Desktop\Money-app\quasar-moneyballs\src\use\useAmountColorClass.js      | JavaScript |          6 |          1 |          2 |          9 |
+| c:\Users\User\Desktop\Money-app\quasar-moneyballs\src\use\useCurrency.js              | JavaScript |         13 |          6 |          5 |         24 |
+| Total                                                                                 |            |        306 |         45 |         66 |        417 |
++---------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
