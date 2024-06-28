@@ -1,3 +1,7 @@
+# 記帳APP
+
+學習 Vue3 & Quasar2 後的第一個練習專案，主用來熟悉操作Quasar工具及其他相關設定
+
 # Moneyballs (quasar-moneyballs)
 
 A Quasar Project
