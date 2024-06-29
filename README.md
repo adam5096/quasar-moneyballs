@@ -6,6 +6,9 @@
 
 A Quasar Project
 
+# 專案中所使用的 Git commit 範例參考來源
+[點我看更多commit範例](https://wadehuanglearning.blogspot.com/2019/05/commit-commit-commit-why-what-commit.html)
+
 ## Install the dependencies
 ```bash
 yarn
