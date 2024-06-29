@@ -2,7 +2,16 @@
     <q-page>
         <div class="q-pa-md">
             <q-list bordered separator>
-                <q-item v-for="(entry) in entries" :key="entry.id">
+                <!-- 滑動元件 -->
+                <q-slide-item v-for="(entry) in entries" :key="entry.id"  @right="oneEntrySlideRight($event, entry)" left-color="positive" right-color="negative">
+                    <!-- <template v-slot:left>
+                      <q-icon name="done" />
+                    </template> -->
+                    <template v-slot:right>
+                      <q-icon name="delete_forever" />
+                    </template>
+                  <!-- 事件項 -->
+                  <q-item >
                     <q-item-section class="text-weight-bold" :class="useAmountColorClass(entry.amount)">
                         {{ entry.name }}
                     </q-item-section>
@@ -10,7 +19,8 @@
                     <q-item-section class="text-weight-bold" :class="useAmountColorClass(entry.amount)" side>
                         {{ useCurrencify(entry.amount) }}
                     </q-item-section>
-                </q-item>
+                  </q-item>
+                </q-slide-item>
             </q-list>
         </div>
         <q-footer class="bg-transparent">
@@ -45,15 +55,18 @@
 // import
 // 分別匯入vue相關函數
 import { ref, reactive, computed } from 'vue'
-// 分別匯入quasar提供的uid函數
-import { uid } from 'quasar'
-// 匯入客製封裝的貨幣呈現 格式化函數
+// 分別匯入quasar提供的uid,useQuasar函數
+import { uid,useQuasar } from 'quasar'
+// 分別匯入客製封裝的貨幣呈現 格式化函數
 import { useCurrencify } from "src/use/useCurrency.js";
-// 匯入封裝的金流顯色函數 income綠色 expense紅色
+// 分別匯入封裝的金流顯色函數 income綠色 expense紅色
 import { useAmountColorClass } from "src/use/useAmountColorClass.js";
 defineOptions({
     name: 'IndexPage'
 });
+
+// useQuasar實例化
+const $q = useQuasar()
 
 // entries
 // 初期預設資料 用以打造、預覽結構和樣式，未來通常改串接API取得伺服器資料
@@ -61,19 +74,16 @@ const entries = ref([{
         id: 'id1',
         name: 'Salary',
         amount: 4999.99
-
     },
     {
         id: 'id2',
         name: 'Rent',
         amount: -999
-
     },
     {
         id: 'id3',
         name: 'Phone',
         amount: -14.99
-
     },
     {
         id: 'id4',
@@ -144,5 +154,57 @@ const addEntry = () => {
     entries.value.push(newEntry)
     // 清空前次輸入框遺留內容
     addEntryFormReset()
+}
+
+// 當對事件項左滑刪除時的邏輯
+// 解構並取出預入物件details中的屬性reset
+const oneEntrySlideRight = ({reset},entry) => {
+    // console.log('right');
+    // 使用彈出對話窗
+    $q.dialog({
+        title: '刪除此筆紀錄',
+        message: `
+        確定刪除嗎?
+        <div class="q-mt-md text-weight-bold ${useAmountColorClass(entry.amount)}">
+          ${ entry.name } : ${ useCurrencify(entry.amount) }
+        </div>
+        `,
+        cancel: true,
+        persistent: true,
+        html:true,
+        ok:{
+          label:'刪除',
+          color:'negative',
+          noCaps:true
+        },
+        cancel:{
+          label:'保留',
+          color:'primary',
+          noCaps:true
+        },
+      }).onOk(() => {
+        // console.log('>>>> OK')
+        deleteEntry(entry.id)
+      }).onCancel(() => {
+        // console.log('>>>> Cancel')
+        // 如果點擊 保留按鈕，則把事件項重置回到初始狀態
+        reset()
+      })
+}
+
+// delete
+// 刪除事件項
+const deleteEntry = (entryId) => {
+  //  console.log('delete',entryId);
+  // 先拿到被刪除項中對應的id(也就是entryId) 拿它比對我的元件本地所存資料項id(也就是entry.id)
+  const index = entries.value.findIndex(entry => entry.id === entryId )
+  // console.log('index',index);
+  // 使用陣列方法splice，參數2個：從下標index處，刪除1位 => 刪除點擊項
+  entries.value.splice(index,1)
+  // 快顯通知使用者
+  $q.notify({
+    message:'資料已刪除',
+    position:'top'
+  })
 }
 </script>
