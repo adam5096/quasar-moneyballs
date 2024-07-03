@@ -1,3 +1,6 @@
+# 專案原作者、影片來源
+[點我看原作者Youtube頻道](https://www.youtube.com/watch?v=BmcA9SB9mSY)
+
 # 記帳APP
 
 學習 Vue3 & Quasar2 後的第一個練習專案，主用來熟悉操作Quasar工具及其他相關設定
