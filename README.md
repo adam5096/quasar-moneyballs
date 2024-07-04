@@ -11,3 +11,5 @@ A Quasar Project
 
 # 專案經開啟 Live Server 後瀏覽器畫面與對應檔案名稱如下
 Moneyball_畫面1.jpeg
+
+![Moneyball_畫面1.jpeg](./Moneyball_畫面1.jpeg)
